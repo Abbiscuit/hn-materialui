@@ -9,7 +9,7 @@ import AuthPage from "./pages/AuthPage";
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
       <AppDrawer>
         <CssBaseline />
         <Switch>
@@ -57,7 +57,7 @@ function App() {
           /> */}
         </Switch>
       </AppDrawer>
-    </div>
+    </React.Fragment>
   );
 }
 

@@ -1,14 +1,11 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
-import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
 import Header from "./Header";
 import { Link } from "react-router-dom";
 
@@ -57,7 +54,7 @@ const AppDrawer = ({ children }) => {
           <ListItemText>商品リスト</ListItemText>
         </ListItem>
 
-        <ListItem button component={Link} to="/signup">
+        <ListItem button component={Link} to="/login">
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
