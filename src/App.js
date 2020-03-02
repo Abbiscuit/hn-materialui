@@ -3,15 +3,15 @@ import AppDrawer from "./components/AppDrawer";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Switch, Route } from "react-router-dom";
 import ProductsPage from "./pages/ProductsPage";
-import SignUp from "./pages/SignUp";
-import LogIn from "./pages/LogIn";
+import AuthPage from "./pages/AuthPage";
+// import SignUp from "./pages/SignUp";
+// import LogIn from "./pages/LogIn";
 
 function App() {
   return (
     <div className="App">
       <AppDrawer>
         <CssBaseline />
-        <h1>Hello World</h1>
         <Switch>
           <Route
             exact
@@ -38,6 +38,13 @@ function App() {
             exact
             path="/login"
             render={props => {
+              return <AuthPage {...props} />;
+            }}
+          />
+          {/* <Route
+            exact
+            path="/login"
+            render={props => {
               return <LogIn {...props} />;
             }}
           />
@@ -47,7 +54,7 @@ function App() {
             render={props => {
               return <SignUp {...props} />;
             }}
-          />
+          /> */}
         </Switch>
       </AppDrawer>
     </div>

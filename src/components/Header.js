@@ -49,9 +49,12 @@ const Header = ({ toggleDrawer }) => {
             <Button color="inherit" component={Link} to="/login">
               Login
             </Button>
+            {/* <Button color="inherit" component={Link} to="/login">
+              Login
+            </Button>
             <Button color="inherit" component={Link} to="/signup">
               Signup
-            </Button>
+            </Button> */}
             <Button color="inherit" component={Link} to="/">
               Logout
             </Button>
