@@ -28,19 +28,21 @@ const Header = ({ toggleDrawer }) => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-            onClick={toggleDrawer("left", true)}
-          >
-            <MenuIcon />
-          </IconButton>
+          <Hidden mdUp>
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="menu"
+              onClick={toggleDrawer("left", true)}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Hidden>
           <Typography variant="h6" className={classes.title}>
             Hnyka
           </Typography>
-          <Hidden mdDown>
+          <Hidden smDown>
             <Button color="inherit" component={Link} to="/products">
               Products
             </Button>
