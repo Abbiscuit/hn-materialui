@@ -1,9 +1,21 @@
 import React from "react";
+import ProductCard from "../components/ProductCard";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles(theme => ({
+  root: {}
+}));
 
 const ProductsPage = () => {
+  const classes = useStyles();
   return (
-    <div>
-      <h1>ProductsPage</h1>
+    <div className={classes.root}>
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
     </div>
   );
 };

@@ -16,10 +16,10 @@ const AuthPage = () => {
     <div className={classes.root}>
       <Container>
         <Grid container>
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} md={6} lg={6}>
             <Login />
           </Grid>
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} md={6} lg={6}>
             <Signup />
           </Grid>
         </Grid>

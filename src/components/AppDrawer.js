@@ -61,6 +61,13 @@ const AppDrawer = ({ children }) => {
           <ListItemText>新規登録/ログイン</ListItemText>
         </ListItem>
 
+        <ListItem button component={Link} to="/profile">
+          <ListItemIcon>
+            <InboxIcon />
+          </ListItemIcon>
+          <ListItemText>プロフィール</ListItemText>
+        </ListItem>
+
         <ListItem button component={Link} to="/about">
           <ListItemIcon>
             <InboxIcon />

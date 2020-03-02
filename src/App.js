@@ -4,6 +4,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { Switch, Route } from "react-router-dom";
 import ProductsPage from "./pages/ProductsPage";
 import AuthPage from "./pages/AuthPage";
+import ProfilePage from "./pages/ProfilePage";
 // import SignUp from "./pages/SignUp";
 // import LogIn from "./pages/LogIn";
 
@@ -39,6 +40,13 @@ function App() {
             path="/login"
             render={props => {
               return <AuthPage {...props} />;
+            }}
+          />
+          <Route
+            exact
+            path="/profile"
+            render={props => {
+              return <ProfilePage {...props} />;
             }}
           />
           {/* <Route
