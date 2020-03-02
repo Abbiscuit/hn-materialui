@@ -10,6 +10,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import Header from "./Header";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   list: {
@@ -49,7 +50,27 @@ const AppDrawer = ({ children }) => {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        {["商品リスト", "お気にいり", "プロフィール", "商品カート"].map(
+        <ListItem button component={Link} to="/products">
+          <ListItemIcon>
+            <InboxIcon />
+          </ListItemIcon>
+          <ListItemText>商品リスト</ListItemText>
+        </ListItem>
+
+        <ListItem button component={Link} to="/signup">
+          <ListItemIcon>
+            <InboxIcon />
+          </ListItemIcon>
+          <ListItemText>新規登録/ログイン</ListItemText>
+        </ListItem>
+
+        <ListItem button component={Link} to="/about">
+          <ListItemIcon>
+            <InboxIcon />
+          </ListItemIcon>
+          <ListItemText>このサービスについて</ListItemText>
+        </ListItem>
+        {/* {["商品リスト", "お気にいり", "プロフィール", "商品カート"].map(
           (text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>
@@ -58,7 +79,7 @@ const AppDrawer = ({ children }) => {
               <ListItemText primary={text} />
             </ListItem>
           )
-        )}
+        )} */}
       </List>
       {/* <Divider />
       <List>
